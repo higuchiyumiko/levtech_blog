@@ -17,4 +17,7 @@ class PostController extends Controller
         $posts=Post::get();
         return view('posts.index',compact('posts'));
     }
+    public function show(Post $post){
+        return view('posts.show')->with(['post'=>$post]);
+    }
 }

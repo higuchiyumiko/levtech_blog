@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class Post extends Model
 {
     use HasFactory;
+    
+    public function getByLimit(int $limit_count=5){
+        return $this->orderBy('updated_at','desc')->limit($limit_count)->get();
+    }
+    public function getPaginateByLimit(int $limit_count=5){
+        return $this->orderBy('updated_at','desc')->paginate($limit_count);
+    }
 }

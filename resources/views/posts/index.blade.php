@@ -15,10 +15,11 @@
                     <a href="/posts/{{$post->id}}">{{$post->title}}</a>
                 </h2>
                 <p class='body'>{{$post->body}}</p>
+                <a href="/categories/{{$post->category->id}}">{{$post->category->name}}</a><br><br>
                 <form action="/posts/{{$post->id}}" id="form_{{$post->id}}" method="post">
                     @csrf
                     @method('DELETE')
-                    <button type="button" onclick="deletePost({{$post->id}})">削除する</button>
+                    <button type="button" onclick="deletePost({{$post->id}})">削除する</button><br><br>
                 </form>
             </div>
             @endforeach

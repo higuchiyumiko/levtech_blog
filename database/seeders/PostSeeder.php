@@ -19,6 +19,8 @@ class PostSeeder extends Seeder
         DB::table('posts')->insert([
             'title'=>'命名の心得',
             'body'=>'命名はデータを基準に考える',
+            'category_id'=>1,
+            'image'=>'null',
             'created_at'=>new DateTime(),
             'updated_at'=>new DateTime(),
             ]);

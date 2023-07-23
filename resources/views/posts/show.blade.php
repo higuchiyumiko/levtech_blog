@@ -14,7 +14,8 @@
             <div class="content_post">
                 <h3>本文</h3>
                 <p>{{$post->body}}</p>
-                <div class="edit"><a href="/posts/{{$post->id}}/edit">編集する</div>
+                <a href="/categories/{{ $post->category->id }}">{{ $post->category->name }}</a><br><br>
+                <div class="edit"><a href="/posts/{{$post->id}}/edit">編集する</div><br>
             </div>
         </div>
         <div class="footer">
